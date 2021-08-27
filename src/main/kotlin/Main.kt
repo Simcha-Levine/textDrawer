@@ -96,8 +96,6 @@ fun removeWord(word: String, string: String): String {
 
     if (string.contains(word)) {
 
-        println("gggggg")
-
         end = string.replace("$word ", "")
         end = end.replace(" $word", "")
         end = end.replace(word, "")
