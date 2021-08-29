@@ -50,7 +50,7 @@ fun main() {
 
     println("finished successfully")
 
-    Runtime.getRuntime().exec("google-chrome-stable ${text.path}")
+//    Runtime.getRuntime().exec("google-chrome-stable ${text.path}")
 }
 
 fun nameDir(path: String, name: String): File {
