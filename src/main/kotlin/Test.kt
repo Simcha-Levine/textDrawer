@@ -4,5 +4,5 @@ import javax.imageio.ImageIO
 
 fun main() {
 
-    println(removeWordType("hi.png"))
+    println(choose())
 }
