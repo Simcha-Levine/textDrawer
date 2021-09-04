@@ -45,7 +45,7 @@ private fun mkDictionary(path: String): List<String> {
     var word = ""
     for (i in text) {
 
-        if (i == ' ' || i == '\n') {
+        if (i == ' ' || i == '\n' || i == '\r') {
             words.add(word)
             word = ""
         } else {
