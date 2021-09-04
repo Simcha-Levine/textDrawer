@@ -1,1 +1,1 @@
-/home/simcha/Documents/images/black.png
+/home/simcha/IdeaProjects/textDrawer/ris/origen_0/origen.png

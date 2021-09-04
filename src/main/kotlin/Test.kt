@@ -1,8 +1,13 @@
-import java.awt.image.BufferedImage
-import java.io.File
-import javax.imageio.ImageIO
-
 fun main() {
 
-    println(choose())
+    println(System.clearProperty("os.name"))
+    println(System.clearProperty("os.name"))
+//
+//    if(!System.clearProperty("os.name").equals("Windows 10")) {
+//
+//        println(8888)
+////        Runtime.getRuntime().exec("google-chrome-stable")
+//
+//    }
+
 }

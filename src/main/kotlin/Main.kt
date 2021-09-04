@@ -1,7 +1,5 @@
 import java.io.File
 import javax.imageio.ImageIO
-import javax.swing.JFileChooser
-import javax.swing.JFrame
 import kotlin.system.exitProcess
 
 fun mkRis(): File {
@@ -17,6 +15,8 @@ fun mkRis(): File {
 
 fun main() {
 
+    val op = System.getProperty("os.name")
+
     val dir = mkRis()
 
     val imagePath: File
@@ -31,7 +31,6 @@ fun main() {
 
     val w: Boolean = choose() == 0
 
-    val dictionary = Dictionary("alotoftext")
     val imageDetails = ImageDetails(imagePath, w)
 
     val message = nameDir(dir.path, imagePath.name)
@@ -39,25 +38,14 @@ fun main() {
 
     ImageIO.write(imageDetails.image, "png", File("${message.path}/origen.png"))
 
-    val text = File("${message.path}/mess.txt")
-
-    text.printWriter().use { out ->
-
-        for (line in imageDetails.lines) {
-            var t = ""
-            for (j in line) {
-                t += dictionary.getLine(j)
-                t += " "
-            }
-            out.println(t)
-        }
-    }
+    val text = writeText(message, imageDetails)
 
     println("finished successfully")
 
-    if(!System.clearProperty("os.name").equals("Windows 10")) {
+    if(!op.equals("Windows 10")) {
 
         Runtime.getRuntime().exec("google-chrome-stable ${text.path}")
+
     }
 }
 
